@@ -1,0 +1,15 @@
+name: PR_template
+
+on:
+  pull_request:
+    branches: [main,develop]
+    type: [closed]
+jobs:
+  build:
+    name: Build1
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v3
+      - name: hi
+        run: echo "${{secrets.ENV}}"
