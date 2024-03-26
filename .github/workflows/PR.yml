@@ -12,4 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: hi
-        run: echo "${{secrets.ENV}}"
+        run: |
+         echo "${{secrets.ENV}}"
+         python -m test.py
+        
