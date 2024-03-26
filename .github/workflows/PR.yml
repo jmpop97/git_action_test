@@ -14,5 +14,5 @@ jobs:
       - name: hi
         run: |
          echo "${{secrets.ENV}}"
-         python test.py
+         python -m test
         
