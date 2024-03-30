@@ -15,7 +15,7 @@ jobs:
         run: |
          echo "${{secrets.ENV}}"
          echo "pr"
-         echo "merge"
+         echo "merge2"
          python -m test
   build2:
     name: Build2
@@ -27,6 +27,6 @@ jobs:
         run: |
          echo "${{secrets.ENV}}"
          echo "pr.merge"
-         echo "merge"
+         echo "merge2"
          python -m test
         
