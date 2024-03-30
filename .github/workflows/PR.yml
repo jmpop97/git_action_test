@@ -8,7 +8,7 @@ jobs:
   build1:
     name: Build1
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' == true
+    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v3
       - name: hi
@@ -19,7 +19,7 @@ jobs:
   build2:
     name: Build2
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v3
       - name: hi
