@@ -14,7 +14,7 @@ jobs:
       - name: hi
         run: |
          echo "${{secrets.ENV}}"
-         echo "pr"
+         echo "????"
          echo "merge"
          python -m test
   build2:
