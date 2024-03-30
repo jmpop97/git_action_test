@@ -6,6 +6,7 @@ on:
     type: [closed]
 jobs:
   build1:
+    needs: build2
     name: Build(1)
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
@@ -18,7 +19,6 @@ jobs:
          echo "merge"
          python -m test
   build2:
-    needs: build1
     name: Build(2)
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
