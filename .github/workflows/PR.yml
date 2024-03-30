@@ -5,15 +5,28 @@ on:
     branches: [main,develop]
     type: [closed]
 jobs:
-  build:
+  build1:
     name: Build1
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' || github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true
     steps:
       - uses: actions/checkout@v3
       - name: hi
         run: |
          echo "${{secrets.ENV}}"
-         echo "to develop2"
+         echo "pr"
+         echo "merge"
+         python -m test
+  build2:
+    name: Build2
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v3
+      - name: hi
+        run: |
+         echo "${{secrets.ENV}}"
+         echo "pr.merge"
+         echo "merge"
          python -m test
         
