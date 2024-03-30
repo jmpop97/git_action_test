@@ -16,7 +16,7 @@ jobs:
          echo "${{secrets.ENV}}"
          echo "pr"
          python -m test
-  build:
+  build1:
     name: Build2
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
