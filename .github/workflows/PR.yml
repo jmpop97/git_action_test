@@ -14,6 +14,6 @@ jobs:
       - name: hi
         run: |
          echo "${{secrets.ENV}}"
-         echo "from develop"
+         echo "from develop3"
          python -m test
         
