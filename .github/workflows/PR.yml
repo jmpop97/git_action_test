@@ -6,6 +6,7 @@ on:
     type: [closed]
 jobs:
   build1:
+    need: build2
     name: Build(1)
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
