@@ -27,6 +27,6 @@ jobs:
         run: |
          echo "${{secrets.ENV}}"
          echo "pr.merge"
-         echo "merge"
+         echo "merge2"
          python -m test
         
