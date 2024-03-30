@@ -18,7 +18,7 @@ jobs:
          echo "merge"
          python -m test
   build2:
-    need: build(1)
+    need: Build(1)
     name: Build(2)
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
