@@ -6,7 +6,7 @@ on:
     type: [closed]
 jobs:
   build1:
-    name: Build1
+    name: Build
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
@@ -14,11 +14,11 @@ jobs:
       - name: hi
         run: |
          echo "${{secrets.ENV}}"
-         echo "pr"
-         echo "merge2"
+         echo "????"
+         echo "merge"
          python -m test
   build2:
-    name: Build2
+    name: Build
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     steps:
