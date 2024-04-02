@@ -21,19 +21,5 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: "3.11.8"
-      - naem : pip installaction
+      - name : pip installaction
         run: pip install -r requirements.txt
-
-  build2:
-    name: Build(2)
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: actions/checkout@v3
-      - name: hi
-        run: |
-         echo "${{secrets.ENV}}"
-         echo "pr.merge"
-         echo "merge2"
-         python -m test
-        
