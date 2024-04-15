@@ -3,7 +3,8 @@ name: PR_template
 on:
   pull_request:
     branches: [main,develop]
-    type: [closed]
+  pull_request_target:
+    branches: [main,develop]
 jobs:
   build1:
     name: Build(1)
@@ -36,4 +37,17 @@ jobs:
          echo "pr.merge"
          echo "merge2"
          python -m test
-        
+  build3:
+    name: Build(prt)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{github.event.pull_request.base.sha}}
+      - name: hi
+        run: |
+         echo "${{secrets.ENV}}"
+         echo "pr.merge"
+         echo "merge2"
+         python -m test
+  
