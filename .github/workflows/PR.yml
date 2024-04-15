@@ -3,7 +3,6 @@ name: PR_template
 on:
   pull_request:
     branches: [main,develop]
-    type: [closed]
 jobs:
   build1:
     name: Build1
