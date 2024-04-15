@@ -1,4 +1,4 @@
-print("check template multi3d")
+print("check template multid")
 with open("저장.txt",mode="w",encoding='utf-8') as f:
     f.write("저장완료")
     print("저장완료")
